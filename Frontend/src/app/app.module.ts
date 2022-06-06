@@ -6,13 +6,17 @@ import { ProjectCardComponent } from './core/project/project-card/project-card.c
 import { ProjectListComponent } from './core/project/project-list/project-list.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PropertyCardComponent } from './core/property/property-card/property-card.component';
+import { PropertyListComponent } from './core/property/property-list/property-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectCardComponent,
     ProjectListComponent,
-    NavBarComponent
+    NavBarComponent,
+    PropertyCardComponent,
+    PropertyListComponent
   ],
   imports: [
     BrowserModule,

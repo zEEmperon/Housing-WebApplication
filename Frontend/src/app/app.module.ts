@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ProjectCardComponent } from './core/project/project-card/project-card.component';
 import { ProjectListComponent } from './core/project/project-list/project-list.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavBarComponent } from './core/nav-bar/nav-bar.component';
     NavBarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

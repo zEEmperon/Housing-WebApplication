@@ -2,23 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyCardComponent } from './core/property/property-card/property-card.component';
 import { PropertyListComponent } from './core/property/property-list/property-list.component';
 import { HousingService } from "./services/housing.service";
+import { MaterialModule } from "./material/material.module";
+import { AddPropertyComponent } from './core/property/add-property/add-property.component';
+import {AppRoutingModule} from "./app-routing/app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
     PropertyCardComponent,
-    PropertyListComponent
+    PropertyListComponent,
+    AddPropertyComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [
     HousingService

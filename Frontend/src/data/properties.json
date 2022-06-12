@@ -22,5 +22,11 @@
     "name": "Flaty",
     "type": "Flat",
     "price": 23485
+  },
+  {
+    "id": 5,
+    "name": "FifthHouse",
+    "type": "House",
+    "price": 2134890
   }
 ]

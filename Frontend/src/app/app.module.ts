@@ -9,12 +9,14 @@ import { HousingService } from "./services/housing.service";
 import { MaterialModule } from "./material/material.module";
 import { AddPropertyComponent } from './core/property/add-property/add-property.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
+import {PropertyDetailComponent} from "./core/property/property-detail/property-detail.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyCardComponent,
     PropertyListComponent,
+    PropertyDetailComponent,
     AddPropertyComponent
   ],
   imports: [

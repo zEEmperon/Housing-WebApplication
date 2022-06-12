@@ -1,3 +1,7 @@
+.container {
+  margin-top: 40px;
+}
+
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   height: 100%
 }
@@ -12,7 +16,12 @@ a {
 }
 
 a:hover, a:active {
-  color: gray;
+  color: #95a3ed;
+}
+
+.active {
+  color: #95a3ed;
+  cursor: default;
 }
 
 .navigation-items {

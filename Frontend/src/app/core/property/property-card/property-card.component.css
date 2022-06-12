@@ -1,1 +1,40 @@
+.card-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrapper:hover .member-icons {
+  bottom: 0;
+  opacity: 1;
+}
+
+.card:hover img{
+  transform: scale(1.05, 1.05);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  max-height: 300px;
+  opacity: .75;
+}
+
+.card img{
+  transform: scale(1, 1);
+  transition-duration: 250ms;
+  transition-timing-function: ease-in;
+  max-height: 300px;
+}
+
+.member-icons {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.animate {
+  transition: all 0.3s ease-in-out;
+}
+
 

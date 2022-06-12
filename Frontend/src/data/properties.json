@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "House1",
+    "type": "House",
+    "price": 1200
+  },
+  {
+    "id": 2,
+    "name": "Villa",
+    "type": "Villa",
+    "price": 10000
+  },
+  {
+    "id": 3,
+    "name": "House121",
+    "type": "House",
+    "price": 1324
+  },
+  {
+    "id": 4,
+    "name": "Flaty",
+    "type": "Flat",
+    "price": 23485
+  }
+]

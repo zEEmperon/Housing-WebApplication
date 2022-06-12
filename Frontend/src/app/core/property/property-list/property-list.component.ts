@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HousingService} from "../../../services/housing.service";
+import {Property} from "../property";
 
 @Component({
   selector: 'property-list',
@@ -8,7 +9,7 @@ import {HousingService} from "../../../services/housing.service";
 })
 export class PropertyListComponent implements OnInit {
 
-  properties: any;
+  properties: Property[] = [];
 
   constructor(private housing: HousingService) {
   }

@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Property} from "../core/property/property";
 
 @Injectable({
   providedIn: 'root'
 })
 export class HousingService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getAllProperties() {
-    return this.http.get('data/properties.json');
+  getAllProperties(): Observable<Property[]> {
+    return this.http.get<Property[]>('data/properties.json');
   }
 }

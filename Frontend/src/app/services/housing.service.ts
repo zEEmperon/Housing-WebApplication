@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 import {Property} from "../core/property/property";
 
 @Injectable({
@@ -11,7 +11,9 @@ export class HousingService {
   constructor(private http: HttpClient) {
   }
 
-  getAllProperties(): Observable<Property[]> {
-    return this.http.get<Property[]>('data/properties.json');
+  getProperties(sellrent: number): Observable<Property[]> {
+    return this.http.get<Property[]>('data/properties.json').pipe(
+      map(data => data.filter(p => p.sellrent === sellrent))
+    );
   }
 }

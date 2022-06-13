@@ -1,30 +1,35 @@
 [
   {
     "id": 1,
+    "sellrent": 1,
     "name": "House1",
     "type": "House",
     "price": 1200
   },
   {
     "id": 2,
+    "sellrent": 1,
     "name": "Villa",
     "type": "Villa",
     "price": 10000
   },
   {
     "id": 3,
+    "sellrent": 2,
     "name": "House121",
     "type": "House",
     "price": 1324
   },
   {
     "id": 4,
+    "sellrent": 1,
     "name": "Flaty",
     "type": "Flat",
     "price": 23485
   },
   {
     "id": 5,
+    "sellrent": 2,
     "name": "FifthHouse",
     "type": "House",
     "price": 2134890

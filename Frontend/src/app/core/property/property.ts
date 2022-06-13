@@ -1,6 +1,8 @@
 export interface Property {
   id: number,
+  sellrent: number,
   name: string,
   type: string,
-  price: number
+  price: number,
+  image?: string
 }

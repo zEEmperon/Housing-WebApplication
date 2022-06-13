@@ -10,6 +10,7 @@ import { MaterialModule } from "./material/material.module";
 import { AddPropertyComponent } from './core/property/add-property/add-property.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {PropertyDetailComponent} from "./core/property/property-detail/property-detail.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {PropertyDetailComponent} from "./core/property/property-detail/property-
     HttpClientModule,
     NgbModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     HousingService

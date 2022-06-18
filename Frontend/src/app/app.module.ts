@@ -10,7 +10,7 @@ import { MaterialModule } from "./material/material.module";
 import { AddPropertyComponent } from './core/property/add-property/add-property.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {PropertyDetailComponent} from "./core/property/property-detail/property-detail.component";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './core/user/login/login.component';
 import { SignupComponent } from './core/user/signup/signup.component';
 
@@ -30,7 +30,8 @@ import { SignupComponent } from './core/user/signup/signup.component';
     NgbModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HousingService

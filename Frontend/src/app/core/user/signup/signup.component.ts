@@ -10,6 +10,7 @@ import {
 } from "@angular/forms";
 import {UserService} from "../../../services/user/user.service";
 import {User} from "../user";
+import {AlertifyService} from "../../../services/alertify/alertify.service";
 
 @Component({
   selector: 'app-signup',
@@ -24,7 +25,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private alertService: AlertifyService
   ) { }
 
   ngOnInit(): void {
@@ -63,6 +65,10 @@ export class SignupComponent implements OnInit {
     if(this.registrationForm.valid){
       this.userService.addUser(this.userData());
       this.registrationForm.reset();
+      this.userSubmitted = false;
+      this.alertService.success("Success");
+    } else {
+      this.alertService.error("Error: some values are invalid")
     }
   }
 

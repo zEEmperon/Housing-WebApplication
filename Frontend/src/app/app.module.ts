@@ -11,6 +11,8 @@ import { AddPropertyComponent } from './core/property/add-property/add-property.
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {PropertyDetailComponent} from "./core/property/property-detail/property-detail.component";
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './core/user/login/login.component';
+import { SignupComponent } from './core/user/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {FormsModule} from "@angular/forms";
     PropertyCardComponent,
     PropertyListComponent,
     PropertyDetailComponent,
-    AddPropertyComponent
+    AddPropertyComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

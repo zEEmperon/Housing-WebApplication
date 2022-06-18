@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyCardComponent } from './core/property/property-card/property-card.component';
 import { PropertyListComponent } from './core/property/property-list/property-list.component';
-import { HousingService } from "./services/housing.service";
 import { MaterialModule } from "./material/material.module";
 import { AddPropertyComponent } from './core/property/add-property/add-property.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
@@ -13,6 +12,8 @@ import {PropertyDetailComponent} from "./core/property/property-detail/property-
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './core/user/login/login.component';
 import { SignupComponent } from './core/user/signup/signup.component';
+import {UserService} from "./services/user/user.service";
+import {HousingService} from "./services/housing/housing.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SignupComponent } from './core/user/signup/signup.component';
     ReactiveFormsModule
   ],
   providers: [
-    HousingService
+    HousingService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HousingService} from "../../../services/housing.service";
+import {HousingService} from "../../../services/housing/housing.service";
 import {Property} from "../property";
 import {ActivatedRoute} from "@angular/router";
 

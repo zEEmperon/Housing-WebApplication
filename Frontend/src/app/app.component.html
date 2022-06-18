@@ -10,6 +10,12 @@
       <a mat-list-item routerLink="add-property" routerLinkActive="active">
         <span class="label">Add</span>
       </a>
+      <a mat-list-item routerLink="login" routerLinkActive="active">
+        <span class="label">Login</span>
+      </a>
+      <a mat-list-item routerLink="signup" routerLinkActive="active">
+        <span class="label">Sign Up</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,11 +26,11 @@
         </button>
       </div>
       <div>
-        <a routerLink="">
-          Housing
+        <a mat-icon-button>
+          <mat-icon routerLink="">home</mat-icon>
         </a>
       </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+      <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.xs [style.margin-left.px]="30">
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
           <li>
             <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -39,6 +45,20 @@
           <li>
             <a routerLink="/add-property" routerLinkActive="active">
               <span class="label">Add</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs [style.margin-right.px]="30">
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li>
+            <a routerLink="/signup" routerLinkActive="active">
+              <span class="label">Sign Up</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/login" routerLinkActive="active">
+              <span class="label">Login</span>
             </a>
           </li>
         </ul>

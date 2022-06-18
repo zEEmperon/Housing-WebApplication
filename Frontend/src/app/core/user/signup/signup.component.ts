@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
 
   registrationForm: FormGroup;
   user: User;
+  userSubmitted: boolean;
 
   constructor(
     private fb: FormBuilder,
@@ -58,9 +59,9 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(){
+    this.userSubmitted = true;
     if(this.registrationForm.valid){
-      this.user = this.userData();
-      this.userService.addUser(this.user);
+      this.userService.addUser(this.userData());
       this.registrationForm.reset();
     }
   }

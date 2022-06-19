@@ -15,7 +15,7 @@ a {
   color: white;
 }
 
-a:hover, a:active {
+a:hover {
   color: #95a3ed;
 }
 

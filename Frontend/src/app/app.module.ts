@@ -12,9 +12,6 @@ import {PropertyDetailComponent} from "./core/property/property-detail/property-
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './core/user/login/login.component';
 import { SignupComponent } from './core/user/signup/signup.component';
-import {UserService} from "./services/user/user.service";
-import {HousingService} from "./services/housing/housing.service";
-import {AlertifyService} from "./services/alertify/alertify.service";
 
 @NgModule({
   declarations: [

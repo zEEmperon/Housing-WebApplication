@@ -16,6 +16,15 @@
       <a *ngIf="!isLoggedIn()" mat-list-item routerLink="signup" routerLinkActive="active">
         <span class="label">Sign Up</span>
       </a>
+      <a *ngIf="isLoggedIn()" mat-list-item>
+        <span class="label">View Dashboard</span>
+      </a>
+      <a *ngIf="isLoggedIn()" mat-list-item>
+        <span class="label">My Profile</span>
+      </a>
+      <a *ngIf="isLoggedIn()" mat-list-item>
+        <span class="label">Change Password</span>
+      </a>
       <a *ngIf="isLoggedIn()" mat-list-item (click)="logout()">
         <span class="label">Logout</span>
       </a>
@@ -52,8 +61,8 @@
           </li>
         </ul>
       </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs [style.margin-right.px]="30">
-        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <div fxFlex fxLayout fxLayoutAlign="flex-end"  [style.margin-right.px]="30">
+        <ul fxHide.xs fxLayout fxLayoutGap="20px" class="navigation-items">
           <li *ngIf="!isLoggedIn()">
             <a routerLink="/signup" routerLinkActive="active">
               <span class="label">Sign Up</span>
@@ -64,11 +73,6 @@
               <span class="label">Login</span>
             </a>
           </li>
-          <li *ngIf="isLoggedIn()">
-            <a (click)="logout()">
-              <span class="label">Logout</span>
-            </a>
-          </li>
         </ul>
       </div>
       <div *ngIf="isLoggedIn()">
@@ -77,16 +81,20 @@
         </a>
         <mat-menu #menu="matMenu">
           <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Redial</span>
-          </button>
-          <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>Check voice mail</span>
+            <mat-icon>dashboard</mat-icon>
+            <span>View Dashboard</span>
           </button>
           <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Disable alerts</span>
+            <mat-icon>account_circle</mat-icon>
+            <span>My Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>vpn_key</mat-icon>
+            <span>Change Password</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
           </button>
         </mat-menu>
       </div>

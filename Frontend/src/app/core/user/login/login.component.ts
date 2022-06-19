@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   onSubmit(form: NgForm){
     const token = this.authService.authUser(form.value);
     if(token){
-      this.alertService.success("Successful");
+      this.alertService.success("You are logged in");
       localStorage.setItem('token', token.username);
       this.router.navigate(['/']);
     } else {

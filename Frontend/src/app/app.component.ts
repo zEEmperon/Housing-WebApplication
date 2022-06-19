@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AlertifyService} from "./services/alertify/alertify.service";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Frontend';
 
-  constructor() {}
+  constructor(
+    private alertService: AlertifyService
+  ) {}
 
   isLoggedIn(){
     return localStorage.getItem('token');
@@ -16,6 +19,7 @@ export class AppComponent {
 
   logout(){
     localStorage.removeItem('token');
+    this.alertService.success("You are logged out");
   }
 
 }

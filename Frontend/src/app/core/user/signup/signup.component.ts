@@ -36,7 +36,7 @@ export class SignupComponent implements OnInit {
   createRegistrationForm(){
 
     let controls = {
-      userName: [null, [Validators.required]],
+      username: [null, [Validators.required]],
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required, Validators.minLength(8)]],
       confirmPassword:[null, [Validators.required]],
@@ -74,7 +74,7 @@ export class SignupComponent implements OnInit {
 
   userData(): User {
     return this.user = {
-      name: this.userName.value,
+      username: this.username.value,
       email: this.email.value,
       password: this.password.value,
       phone: this.phone.value
@@ -82,8 +82,8 @@ export class SignupComponent implements OnInit {
   }
 
   //Getters for form controls
-  get userName() {
-    return this.registrationForm.get('userName') as FormControl;
+  get username() {
+    return this.registrationForm.get('username') as FormControl;
   }
 
   get email() {

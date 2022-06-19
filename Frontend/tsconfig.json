@@ -25,7 +25,7 @@
     ],
     "typeRoots": [
       "node_modules/@types",
-      "src/alertify.type.d.ts"
+      "src/ts-modules/alertify.type.d.ts"
     ]
   },
   "angularCompilerOptions": {

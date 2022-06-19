@@ -10,11 +10,14 @@
       <a mat-list-item routerLink="add-property" routerLinkActive="active">
         <span class="label">Add</span>
       </a>
-      <a mat-list-item routerLink="login" routerLinkActive="active">
+      <a *ngIf="!isLoggedIn()" mat-list-item routerLink="login" routerLinkActive="active">
         <span class="label">Login</span>
       </a>
-      <a mat-list-item routerLink="signup" routerLinkActive="active">
+      <a *ngIf="!isLoggedIn()" mat-list-item routerLink="signup" routerLinkActive="active">
         <span class="label">Sign Up</span>
+      </a>
+      <a *ngIf="isLoggedIn()" mat-list-item (click)="logout()">
+        <span class="label">Logout</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -51,14 +54,19 @@
       </div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs [style.margin-right.px]="30">
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <li>
+          <li *ngIf="!isLoggedIn()">
             <a routerLink="/signup" routerLinkActive="active">
               <span class="label">Sign Up</span>
             </a>
           </li>
-          <li>
+          <li *ngIf="!isLoggedIn()">
             <a routerLink="/login" routerLinkActive="active">
               <span class="label">Login</span>
+            </a>
+          </li>
+          <li *ngIf="isLoggedIn()">
+            <a (click)="logout()">
+              <span class="label">Logout</span>
             </a>
           </li>
         </ul>

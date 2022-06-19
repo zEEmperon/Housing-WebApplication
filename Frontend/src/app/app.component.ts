@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frontend';
+
+  constructor() {}
+
+  isLoggedIn(){
+    return localStorage.getItem('token');
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+  }
+
 }
